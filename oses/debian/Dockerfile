@@ -16,8 +16,7 @@ RUN         apt update && apt upgrade -y \
 				&& useradd -m -d /home/container -s /bin/bash container
 
 USER        container
-ENV         USER=container HOME=/home/container
-ENV         DEBIAN_FRONTEND noninteractive
+ENV         USER=container HOME=/home/container DEBIAN_FRONTEND=noninteractive
 
 WORKDIR     /home/container
 
