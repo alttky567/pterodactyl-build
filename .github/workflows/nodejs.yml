@@ -5,9 +5,12 @@ on:
     - cron: "0 0 1 * *"
   push:
     branches:
-      - master
+      - main
     paths:
-      - nodejs/*
+      - nodejs/**
+permissions:
+  contents: read
+  packages: write
 jobs:
   push:
     name: "yolks:nodejs_${{ matrix.tag }}"
